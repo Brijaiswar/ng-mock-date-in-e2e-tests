@@ -12,7 +12,7 @@ describe('workspace-project App', () => {
     spyOn(DateService.prototype, 'getCurrentDate').and.returnValue(new Date(2040, 0, 1));
   });
 
-  it('should display the fake date put in place via jasmine.clock().mockDate()', async () => {
+  it('should display the fake date put in place via a fake date service', async () => {
     await homePage.navigateTo();
     await homePage.isLoaded();
 
